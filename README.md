@@ -1,4 +1,4 @@
-# jquery.formValidate.js
+# jquery.checkform.js
 
 @author   iProg原创
 
