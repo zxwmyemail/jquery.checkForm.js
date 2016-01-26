@@ -1,4 +1,4 @@
-# jquery.checkform.js
+# jquery.checkForm.js
 
 @author   iProg原创
 
