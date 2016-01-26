@@ -351,7 +351,7 @@
         init : function (_options) {
             return this.each(function() {
                 var $this = $(this);
-                var options = $.extend({}, $.fn.formValidate.defaults, _options);
+                var options = $.extend({}, $.fn.checkform.defaults, _options);
 
                 // 绑定hover、keyup、change事件
                 privateMethods.bindValidateEvents($this);
