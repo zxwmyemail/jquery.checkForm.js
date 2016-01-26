@@ -13,13 +13,13 @@
  <span style="color:red" id="username-tip"></span>
 ******************************************************************************************************/
 ;(function($){
-    $.fn.checkform = function (method) {
+    $.fn.checkForm = function (method) {
         if (methods[method]) {
             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
         } else if (typeof method === 'object' || !method) {
             return methods.init.apply(this, arguments);
         } else {
-            $.error('Method ' + method + ' does not exist on jQuery.checkform');
+            $.error('Method ' + method + ' does not exist on jQuery.checkForm');
         }
     };
 
@@ -351,7 +351,7 @@
         init : function (_options) {
             return this.each(function() {
                 var $this = $(this);
-                var options = $.extend({}, $.fn.checkform.defaults, _options);
+                var options = $.extend({}, $.fn.checkForm.defaults, _options);
 
                 // 绑定hover、keyup、change事件
                 privateMethods.bindValidateEvents($this);
@@ -370,7 +370,7 @@
     };
 
     // 默认参数
-    $.fn.checkform.defaults = {
+    $.fn.checkForm.defaults = {
         submitBtnId : false,
         onSubmitHandle : $.noop
     };
