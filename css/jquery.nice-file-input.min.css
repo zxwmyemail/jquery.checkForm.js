@@ -1,0 +1,24 @@
+.fileWrapper{
+    position:relative;
+    overflow:hidden;
+    padding:0;
+}
+input[type=text].fileInputText{
+    float:left;
+    border:1px solid #ddd;
+    margin:0;
+    padding:0 5px;
+    font-family: "Microsoft Yahei";
+}
+input[type=button].fileInputButton{
+    font-size:12px;
+    float:right;
+    border:solid 1px #ccc;
+    background:#ddd;
+    box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    -webkit-box-sizing:content-box;
+    margin:0;
+    padding:0;
+    font-family: "Microsoft Yahei";
+}
