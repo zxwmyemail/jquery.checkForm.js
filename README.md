@@ -44,8 +44,7 @@
 $('#demo').checkForm({
     submitBtnId : 'saveBtn',       // 提交按钮的id值
     onSubmitHandle : function(){   // 校验完毕后的提交事件，可发送ajax请求之类的
-        alert('校验通过');
-        // #code 这里做验证通过后的操作，如提交表单等
+        alert('校验通过');         // #code 这里做验证通过后的操作，如提交表单等
     }
 });
 ```
