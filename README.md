@@ -34,8 +34,8 @@
   
 1. required：是否必填；validate-type校验类型；min字符串最小长度；max字符串最大长度；tipmsg为input中没有文本时的提示语；
    errmsg为用户输入错误时的提示语；
-2. 上面的提示语显示位置需要开发人员自己单独指定，比如上面的id值为name-tip的span标签就是显示提示语的，该标签需指定id属
-   性值，属性值的规则为input的name属性值拼接上"-tip"，比如上例中为 name-tip.
+2. 上面的提示语显示位置需要开发人员自己单独指定，比如上面的id值为name-tip的span标签就是显示提示语的，该标签需指定id属性
+   值，属性值的规则为input的name属性值拼接上"-tip"，比如上例中为 name-tip.
 ```
 <br>
 （3）对表单验证添加js的初始化校验代码，如下：
