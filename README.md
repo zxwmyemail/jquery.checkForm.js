@@ -40,7 +40,7 @@
 <br>
 （3）对表单验证添加js的初始化校验代码，如下：
 
-```html
+```js
 $('#demo').checkForm({
     submitBtnId : 'saveBtn',       // 提交按钮的id值
     onSubmitHandle : function(){   // 校验完毕后的提交事件，可发送ajax请求之类的
