@@ -1,4 +1,4 @@
-**jquery.checkFrom.js -- 表单验证插件**
+##jquery.checkFrom.js -- 表单验证插件
 
 
 > - 作者： iProg
