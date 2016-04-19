@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>表单验证插件</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>表单验证插件</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/jquery.nice-file-input.min.css"/>
-    <script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery.checkForm.js"></script>
     <script src="js/jquery.nice-file-input.min.js"></script>
     <style type="text/css">
@@ -12,7 +13,7 @@
             margin: 30px auto;
             overflow: hidden;
             font-size: 12px;
-            padding-left: 200px;
+            padding-left: 30px;
             font-family: 'Microsoft Yahei';
         }
         form .form-control{
@@ -49,10 +50,9 @@
         }
 
         select{
-            width: 360px;
+            width: 364px;
             height:24px;
             font-family: 'Microsoft Yahei';
-            font-size: 12px;
         }
 
         textarea{
@@ -199,7 +199,7 @@
         <div class="form-control">
             <label>textarea任意字符：</label>
             <div class="form-group" style="height:120px;">
-                <textarea name="alltextarea" required="true" validate-type="all" tipmsg="必填项" errmsg="任意字符"></textarea>
+                <textarea name="alltextarea" required="true" validate-type="all" tipmsg="必选项" errmsg="任意字符"></textarea>
             </div>
             <div class="tip-div">
                 <span style="color:red" id="alltextarea-tip"></span>
@@ -266,7 +266,7 @@ $(function(){
 
     $('#demo').checkForm({
         submitBtnId : 'saveBtn',       // 提交按钮的id值
-        onSubmitHandle : function(){   // 校验完毕后的提交事件，可发送ajax请求之类的
+        onSubmitHandle : function(){   // 校验完毕后的提交时间，可发送ajax请求之类的
             alert('校验通过');
             // #code 这里做验证通过后的操作，如提交表单等
         }
