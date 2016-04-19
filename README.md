@@ -9,9 +9,12 @@
 <br>
 ####使用方法
 <br>
-（1）先导入js和jquery的插件：
+（1）先导入js和jquery以及相关css文件：
 
 ```html
+<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery.nice-file-input.min.css"/>
+<script src="js/jquery.nice-file-input.min.js"></script>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/jquery.checkForm.js"></script>
 ```
