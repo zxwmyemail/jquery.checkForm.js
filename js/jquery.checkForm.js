@@ -1,7 +1,7 @@
 /*****************************************************************************************************
  表单校验插件
 
- @author   iProg原创
+ @author   iProg
  @date     2016-01-21
 
  使用方法参见demo.html
@@ -12,7 +12,7 @@
  那么错误提示信息的标签，需要指定属性id值，id值 = name属性值 和 -tip 组装，所以就是username-tip
  <span style="color:red" id="username-tip"></span>
 ******************************************************************************************************/
-;(function($){
+(function($){
     $.fn.checkForm = function (method) {
         if (methods[method]) {
             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
@@ -324,24 +324,35 @@
         _callValidateRules : function(selfObj, value, min, max, type){
             var result = false;
 
-            var validateType = selfObj.attr('validate-type');
-            if (validateType) {
-                var flag = eval('validateRules.'+validateType+'("'+value+'",'+min+','+max+')');
-                if (!flag) {
-                    if (type == 0) {
-                        $("#"+selfObj.attr('name')+"-tip").html('');
-                    }else if (type == 1) {
+            if (value) {  // 验证表单有值的时候
+                var validateType = selfObj.attr('validate-type');
+                if (validateType) {
+                    var flag = eval('validateRules.'+validateType+'("'+value+'",'+min+','+max+')');
+                    if (!flag) {
                         var errmsg = selfObj.attr('errmsg');
                         if (errmsg) {
-                            $("#"+selfObj.attr('name')+"-tip").html(errmsg);
+                            $("#"+selfObj.attr('name')+"-tip").html('<i class="fa fa-remove" style="font-size:14px;"></i> '+errmsg);
                         }
+                    }else{
+                        $("#"+selfObj.attr('name')+"-tip").html('<i class="fa fa-check" style="color:green;font-size:14px;"></i>');
+                        result = true;
                     }
-                }else{
-                    $("#"+selfObj.attr('name')+"-tip").html('');
-                    result = true;
                 }
-            }
 
+            }
+            else    // 验证表单没有值的时候
+            {  
+                if (type == 1) {         // type==1表示是鼠标经过，或者用户清空文本框，按键弹起来的时候，也传1，来提示用户必填项
+                    var tipmsg = selfObj.attr('tipmsg');
+                    if (tipmsg) {
+                        $("#"+selfObj.attr('name')+"-tip").html('* '+tipmsg);
+                    }
+                } else if (type == 0) {  // type==0表示是鼠标离开
+                    $("#"+selfObj.attr('name')+"-tip").html('');
+                }
+                
+            }
+            
             return result;
         }
 
