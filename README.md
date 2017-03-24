@@ -1,4 +1,5 @@
-##jquery.checkForm.js - 表单验证插件
+jquery.checkForm.js - 表单验证插件
+----
 
 > - 作者： iProg
 > - 日期： 2016-01-12
@@ -6,9 +7,9 @@
 > - 邮箱： zxwmyemail@126.com
 > - 描述： 这是一个前端的表单验证插件，方便前端表单做验证，提高开发效率
 
-<br>
+
 ####使用方法
-<br>
+
 （1）先导入js和jquery以及相关css文件：
 
 ```html
@@ -18,7 +19,7 @@
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/jquery.checkForm.js"></script>
 ```
-<br>
+
 （2）制作表单，以 **input[type=text]** 举例说明如下：
 
 ```html
@@ -40,7 +41,7 @@
 2. 上面的提示语显示位置需要开发人员自己单独指定，比如上面的id值为name-tip的span标签就是显示提示语的，该标签需指定id属性
    值，属性值的规则为input的name属性值拼接上"-tip"，比如上例中为 name-tip.
 ```
-<br>
+
 （3）对表单验证添加js的初始化校验代码，如下：
 
 ```js
